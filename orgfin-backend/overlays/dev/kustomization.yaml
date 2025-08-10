@@ -20,11 +20,6 @@ replacements:
 patches:
   - target:
       version: v1
-      kind: Ingress
-      name: orgfin-ingress
-    path: ingress-paths-dev-patch.yaml
-  - target:
-      version: v1
       kind: Deployment
       name: orgfin-backend
     patch: |-

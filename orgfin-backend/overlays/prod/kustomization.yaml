@@ -23,6 +23,7 @@ patches:
       kind: Ingress
       name: orgfin-ingress
     path: ingress-patch.yaml
+  # Ingress paths are defined in base now
 
   - target:
       group: apps

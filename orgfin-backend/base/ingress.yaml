@@ -13,6 +13,55 @@ spec:
     - host: orgfin.local
       http:
         paths:
+          - path: /auth
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /accounts
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /categories/grouped
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
+          - path: /categories
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /currencies
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /users
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /transactions
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
           - path: /
             pathType: Prefix
             backend:
@@ -23,6 +72,55 @@ spec:
     - host: orgfin-api.peskov.info
       http:
         paths:
+          - path: /auth
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /accounts
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /categories/grouped
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
+          - path: /categories
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /currencies
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /users
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /transactions
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
           - path: /
             pathType: Prefix
             backend:
@@ -33,6 +131,55 @@ spec:
     - host: api.orgfin.run
       http:
         paths:
+          - path: /auth
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /accounts
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /categories/grouped
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
+          - path: /categories
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /currencies
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /users
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /transactions
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
           - path: /
             pathType: Prefix
             backend:
