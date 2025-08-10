@@ -55,6 +55,13 @@ spec:
                 name: backend-go
                 port:
                   number: 8001
+          - path: /reports
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
           - path: /users
             pathType: Prefix
             backend:
@@ -115,6 +122,13 @@ spec:
                 port:
                   number: 8001
           - path: /currencies
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001
+          - path: /reports
             pathType: Prefix
             backend:
               service:
@@ -187,6 +201,13 @@ spec:
                 name: backend-go
                 port:
                   number: 8001
+          - path: /reports
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-go
+                port:
+                  number: 8001  
           - path: /users
             pathType: Prefix
             backend:
