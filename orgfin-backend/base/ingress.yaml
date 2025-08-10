@@ -13,6 +13,13 @@ spec:
     - host: orgfin.local
       http:
         paths:
+          - path: /auth/oauth/
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
           - path: /auth
             pathType: Prefix
             backend:
@@ -72,6 +79,13 @@ spec:
     - host: orgfin-api.peskov.info
       http:
         paths:
+          - path: /auth/oauth/
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
           - path: /auth
             pathType: Prefix
             backend:
@@ -131,6 +145,13 @@ spec:
     - host: api.orgfin.run
       http:
         paths:
+          - path: /auth/oauth/
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
           - path: /auth
             pathType: Prefix
             backend:
