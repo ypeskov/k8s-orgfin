@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orgfin-backend-go
-          image: ypeskov/api-go-orgfin:1.0.19
+          image: ypeskov/api-go-orgfin:1.0.20
           ports:
             - containerPort: 8001
           envFrom:
