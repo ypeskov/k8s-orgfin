@@ -4,7 +4,6 @@ metadata:
   name: orgfin-ingress
   namespace: default
   annotations:
-    # nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
@@ -13,219 +12,30 @@ spec:
     - host: orgfin.local
       http:
         paths:
-          - path: /auth/oauth/
-            pathType: Prefix
-            backend:
-              service:
-                name: backend
-                port:
-                  number: 8000
-          - path: /auth
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /accounts
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /categories/grouped
-            pathType: Prefix
-            backend:
-              service:
-                name: backend
-                port:
-                  number: 8000
-          - path: /categories
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /currencies
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /reports
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /users
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /transactions
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: backend
+                name: backend-go
                 port:
-                  number: 8000
+                  number: 8001
     - host: orgfin-api.peskov.info
       http:
         paths:
-          - path: /auth/oauth/
-            pathType: Prefix
-            backend:
-              service:
-                name: backend
-                port:
-                  number: 8000
-          - path: /auth
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /accounts
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /categories/grouped
-            pathType: Prefix
-            backend:
-              service:
-                name: backend
-                port:
-                  number: 8000
-          - path: /categories
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /currencies
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /reports
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /users
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /transactions
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: backend
+                name: backend-go
                 port:
-                  number: 8000
+                  number: 8001
     - host: api.orgfin.run
       http:
         paths:
-          - path: /auth/oauth/
-            pathType: Prefix
-            backend:
-              service:
-                name: backend
-                port:
-                  number: 8000
-          - path: /auth
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /accounts
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /categories/grouped
-            pathType: Prefix
-            backend:
-              service:
-                name: backend
-                port:
-                  number: 8000
-          - path: /categories
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /currencies
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /reports
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001  
-          - path: /users
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
-          - path: /transactions
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-go
-                port:
-                  number: 8001
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: backend
+                name: backend-go
                 port:
-                  number: 8000
+                  number: 8001
