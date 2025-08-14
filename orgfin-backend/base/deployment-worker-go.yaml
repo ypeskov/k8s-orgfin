@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orgfin-backend-worker
+  name: orgfin-worker-go
   labels:
-    app: orgfin-backend-worker
+    app: orgfin-worker-go
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: orgfin-backend-worker
+      app: orgfin-worker-go
   template:
     metadata:
       labels:
-        app: orgfin-backend-worker
+        app: orgfin-worker-go
     spec:
       containers:
-        - name: orgfin-backend-worker
-          image: ypeskov/budget-worker:1.0.0
+        - name: orgfin-worker-go
+          image: ypeskov/orgfin-worker-go:1.0.0
           envFrom:
             - configMapRef:
                 name: orgfin-env
