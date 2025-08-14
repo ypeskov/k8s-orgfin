@@ -1,5 +1,6 @@
 resources:
   - deployment-go.yaml
+  - deployment-worker.yaml
   - deployment-celery.yaml
   - deployment-beat.yaml
   - service-go.yaml
