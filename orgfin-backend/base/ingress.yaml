@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: orgfin.local
+    - host: orgfin-api.local
       http:
         paths:
           - path: /
