@@ -1,5 +1,6 @@
 resources:
   - deployment-go.yaml
   - deployment-worker-go.yaml
+  - deployment-scheduler-go.yaml
   - service-go.yaml
   - ingress.yaml
