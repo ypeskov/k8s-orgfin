@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orgfin-worker-go
-          image: ypeskov/orgfin-worker-go:1.0.33
+          image: ypeskov/orgfin-worker-go:1.0.34
           envFrom:
             - configMapRef:
                 name: orgfin-env
