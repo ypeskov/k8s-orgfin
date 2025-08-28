@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orgfin-scheduler-go
-          image: ypeskov/orgfin-scheduler-go:1.0.37
+          image: ypeskov/orgfin-scheduler-go:1.0.38
           envFrom:
             - configMapRef:
                 name: orgfin-env
