@@ -17,6 +17,13 @@ spec:
       containers:
         - name: orgfin-scheduler-python
           image: ypeskov/orgfin-api-python:0.0.1
+          command:
+            - celery
+            - -A
+            - app.celery
+            - beat
+            - -l
+            - info
           envFrom:
             - configMapRef:
                 name: orgfin-env
