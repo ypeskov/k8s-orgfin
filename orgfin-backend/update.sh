@@ -10,7 +10,7 @@ fi
 
 VERSION=$1
 
-echo "Updating Go service deployments to version: $VERSION"
+echo "Updating service deployments to version: $VERSION"
 
 BASE_DIR="$(dirname "$0")/base"
 
@@ -29,17 +29,17 @@ update_image_tag() {
     echo "✓ Updated $file"
 }
 
-update_image_tag "$BASE_DIR/deployment-go.yaml" "ypeskov/orgfin-api-go"
-update_image_tag "$BASE_DIR/deployment-scheduler-go.yaml" "ypeskov/orgfin-scheduler-go"
-update_image_tag "$BASE_DIR/deployment-worker-go.yaml" "ypeskov/orgfin-worker-go"
+update_image_tag "$BASE_DIR/deployment-api.yaml" "ypeskov/orgfin-api-python"
+update_image_tag "$BASE_DIR/deployment-scheduler-python.yaml" "ypeskov/orgfin-api-python"
+update_image_tag "$BASE_DIR/deployment-worker-python.yaml" "ypeskov/orgfin-api-python"
 
 echo ""
 echo "All Go service deployments updated to version: $VERSION"
 echo ""
 echo "Updated files:"
-echo "  - $BASE_DIR/deployment-go.yaml"
-echo "  - $BASE_DIR/deployment-scheduler-go.yaml"
-echo "  - $BASE_DIR/deployment-worker-go.yaml"
+echo "  - $BASE_DIR/deployment-api.yaml"
+echo "  - $BASE_DIR/deployment-scheduler-python.yaml"
+echo "  - $BASE_DIR/deployment-worker-python.yaml"
 echo ""
 echo "To apply changes, run:"
 echo "  cd orgfin-backend && ./apply.sh"
