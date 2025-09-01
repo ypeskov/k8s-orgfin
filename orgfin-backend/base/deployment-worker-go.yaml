@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orgfin-worker-go
+  labels:
+    app: orgfin-worker-go
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orgfin-worker-go
+  template:
+    metadata:
+      labels:
+        app: orgfin-worker-go
+    spec:
+      containers:
+        - name: orgfin-worker-go
+          image: ypeskov/orgfin-worker-go:1.0.38
+          envFrom:
+            - configMapRef:
+                name: orgfin-env

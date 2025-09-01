@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orgfin-scheduler-go
+  labels:
+    app: orgfin-scheduler-go
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orgfin-scheduler-go
+  template:
+    metadata:
+      labels:
+        app: orgfin-scheduler-go
+    spec:
+      containers:
+        - name: orgfin-scheduler-go
+          image: ypeskov/orgfin-scheduler-go:1.0.38
+          envFrom:
+            - configMapRef:
+                name: orgfin-env

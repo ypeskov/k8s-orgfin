@@ -16,9 +16,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: api-python
+                name: backend-go
                 port:
-                  number: 8000
+                  number: 8001
     - host: orgfin-api.peskov.info
       http:
         paths:
@@ -26,9 +26,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: api-python
+                name: backend-go
                 port:
-                  number: 8000
+                  number: 8001
     - host: api.orgfin.run
       http:
         paths:
@@ -36,6 +36,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: api-python
+                name: backend-go
                 port:
-                  number: 8000
+                  number: 8001
