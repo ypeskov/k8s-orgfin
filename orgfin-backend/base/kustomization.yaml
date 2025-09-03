@@ -1,6 +1,6 @@
 resources:
-  - deployment-go.yaml
-  - deployment-worker-go.yaml
-  - deployment-scheduler-go.yaml
-  - service-go.yaml
+  - deployment-api.yaml
+  - deployment-worker-python.yaml
+  - deployment-scheduler-python.yaml
+  - service-python.yaml
   - ingress.yaml

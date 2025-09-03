@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orgfin-worker-python
+  labels:
+    app: orgfin-worker-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orgfin-worker-python
+  template:
+    metadata:
+      labels:
+        app: orgfin-worker-python
+    spec:
+      containers:
+        - name: orgfin-worker-python
+          image: ypeskov/orgfin-api-python:1.6.18
+          command:
+            - celery
+            - -A
+            - app.celery
+            - worker
+            - -l
+            - info
+          envFrom:
+            - configMapRef:
+                name: orgfin-env

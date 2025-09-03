@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orgfin-scheduler-python
+  labels:
+    app: orgfin-scheduler-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orgfin-scheduler-python
+  template:
+    metadata:
+      labels:
+        app: orgfin-scheduler-python
+    spec:
+      containers:
+        - name: orgfin-scheduler-python
+          image: ypeskov/orgfin-api-python:1.6.18
+          command:
+            - celery
+            - -A
+            - app.celery
+            - beat
+            - -l
+            - info
+          envFrom:
+            - configMapRef:
+                name: orgfin-env
