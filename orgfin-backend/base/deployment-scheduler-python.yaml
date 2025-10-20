@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orgfin-scheduler-python
-          image: ypeskov/orgfin-api-python:2.1.4
+          image: ypeskov/orgfin-api-python:2.1.5
           command:
             - celery
             - -A
