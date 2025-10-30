@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: orgfin-frontend
-          image: ypeskov/frontend-orgfin:2.1.12
+          image: ypeskov/frontend-orgfin:2.1.13
           imagePullPolicy: Always
           ports:
             - containerPort: 80
