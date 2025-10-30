@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orgfin-worker-python
-          image: ypeskov/orgfin-api-python:2.1.13
+          image: ypeskov/orgfin-api-python:2.1.14
           command:
             - celery
             - -A
