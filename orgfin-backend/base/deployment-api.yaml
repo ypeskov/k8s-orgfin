@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orgfin-api-python
-          image: ypeskov/orgfin-api-python:2.1.14
+          image: ypeskov/orgfin-api-python:2.2.0
           ports:
             - containerPort: 8000
           envFrom:
